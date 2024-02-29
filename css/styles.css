@@ -16,6 +16,7 @@ header {
     background-color: #AF2EDB;
     padding: 10px;
     margin: 10px;
+    display: inline-block;
     border-bottom: 3px solid #000000;
     position: relative;
 }
@@ -77,9 +78,17 @@ header {
     padding: 0 15px;
 }
 
+.row {
+    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  }
+
 /*index*/
 #hero {
     text-align: center;
+    background-color: #ffe4c4;
+    padding: 20px 0;
+    display: inline-block;
+    width: 100%
 }
 
 #hero h2 {
@@ -93,13 +102,25 @@ header {
     width: 100%;
 }
 
-img {
-    width: 100%;
-}
+main {
+    padding-top: 133px;
+  }
 
 .logo {
     max-width: 150px;
+    text-align: center;
 }
+
+nav > ul > li {
+    display: inline-block;
+  }
+
+  nav > ul > li > a {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a4a4a;
+  }
 
 .social-icon {
     inline-block;
