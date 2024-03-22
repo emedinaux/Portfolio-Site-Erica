@@ -33,6 +33,61 @@ body {
     /* sets the line height to 1.6 */
 }
 
+footer {
+    text-align: center;
+}
+
+@keyframes color-change {
+    from {
+        fill: #edc655;
+    }
+
+    to {
+        fill: #f76414;
+    }
+}
+
+.sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+
+    to {
+        transform: translate(200px, 50px);
+    }
+}
+
+.cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+
 img {
     width: 100%;
 }
@@ -127,17 +182,19 @@ nav>ul>li>a {
 }
 
 .social {
-    text-align:center;
+    text-align: center;
 }
+
 .social a {
     display: inline-block;
     margin: 0 5px;
 }
 
-.social svg {
+.social img {
     width: 50px;
     height: auto;
 }
+
 a {
     color: #000000;
     text-decoration: none;
@@ -153,7 +210,7 @@ a:hover {
 .button {
     display: inline-block;
     /* Since the <a> tag is inline by default, we need to change this to inline-block */
-    background-color: #979696;
+    background-color: #ffffff;
     color: #AF2EDB;
     /* Override the default link color */
     font-weight: 500;
@@ -161,12 +218,67 @@ a:hover {
     border-radius: 3px;
     border-bottom: 2px solid #000000;
     /* Width of the border, type, color */
-    transition: 0.2s opacity;
+    transition: 0.2s all ease;
 }
 
-.button:visited {
-    /* Visited link */
-    color: #CEB31B;
+.button:hover {
+    opacity: .8;
+    background-color: #979696;
+
+}
+
+.col-sm-1 {
+    width: 8.33%;
+}
+
+.col-sm-2 {
+    width: 16.66%;
+}
+
+.col-sm-3 {
+    width: 25%;
+}
+
+.col-sm-4 {
+    width: 33.33%;
+}
+
+.col-sm-5 {
+    width: 41.66%;
+}
+
+.col-sm-6 {
+    width: 50%;
+}
+
+.col-sm-7 {
+    width: 58.33%;
+}
+
+.col-sm-8 {
+    width: 66.66%;
+}
+
+.col-sm-9 {
+    width: 75%;
+}
+
+.col-sm-10 {
+    width: 83.33%;
+}
+
+.col-sm-11 {
+    width: 91.66%;
+}
+
+.col-sm-12 {
+    width: 100%;
+}
+
+.about-portrait {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
 }
 
 /* ==============================
@@ -202,22 +314,63 @@ Medium devices (640px and larger)
         display: block;
     }
 
-    .col-md-4 {
-        width: 40%;
+    .col-md-1 {
+        width: 8.33%;
     }
 
-    .col-md-6 {
-        width: 60%;
+    .col-md-2 {
+        width: 16.66%;
+    }
+
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .col-md-4 {
+        width: 33.33%;
     }
 
     .col-md-5 {
+        width: 41.66%;
+    }
+
+    .col-md-6 {
         width: 50%;
     }
 
+    .col-md-7 {
+        width: 58.33%;
+    }
+
+    .col-md-8 {
+        width: 66.66%;
+    }
+
+    .col-md-9 {
+        width: 75%;
+    }
+
+    .col-md-10 {
+        width: 83.33%;
+    }
+
+    .col-md-11 {
+        width: 91.66%;
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
 
     [class*="col-"] {
         float: left;
         padding: 10px;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 
     nav>ul>li {
@@ -226,49 +379,78 @@ Medium devices (640px and larger)
 }
 
 
-    /* ==============================
+/* ==============================
 Large devices (1024px or larger)
 ================================= */
-    @media only screen and (min-width: 1024px) {
-        header {
-            text-align: unset;
-            padding: 20px 0 13px;
-        }
-
-        nav {
-            width: auto;
-            float: right;
-            margin-top: 4px;
-        }
-
-        main {
-            font-size: 18px;
-        }
-
-        .col-lg-6 {
-            width: 60%;
-        }
-
-        .col-lg-4 {
-            width: 40%;
-        }
-
-        .col-lg-5 {
-            width: 50%;
-        }
-
-        [class*="col-"] {
-            float: left;
-            padding: 10px;
-        }
-
-        nav>ul>li {
-            display: inline-block;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+@media only screen and (min-width: 1024px) {
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
     }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+    main {
+        font-size: 18px;
+    }
+
+
+    .col-lg-1 {
+        width: 8.33%;
+    }
+
+    .col-lg-2 {
+        width: 16.66%;
+    }
+
+    .col-lg-3 {
+        width: 25%;
+    }
+
+    .col-lg-4 {
+        width: 33.33%;
+    }
+
+    .col-lg-5 {
+        width: 41.66%;
+    }
+
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-7 {
+        width: 58.33%;
+    }
+
+    .col-lg-8 {
+        width: 66.66%;
+    }
+
+    .col-lg-9 {
+        width: 75%;
+    }
+
+    .col-lg-10 {
+        width: 83.33%;
+    }
+
+    .col-lg-11 {
+        width: 91.66%;
+    }
+
+    .col-lg-12 {
+        width: 100%;
+    }
+
+
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
