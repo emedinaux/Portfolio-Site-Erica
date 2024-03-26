@@ -36,6 +36,11 @@ body {
 footer {
     text-align: center;
 }
+#about-picture {
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+}
 
 @keyframes color-change {
     from {
@@ -274,7 +279,13 @@ a:hover {
 .col-sm-12 {
     width: 100%;
 }
-
+[class*="col-"].col-centered {
+    margin: 0 auto;
+    float: none;
+}
+.col-text-centered {
+    text-align: center;
+}
 .about-portrait {
     max-width: 300px;
     margin: 0 auto;
