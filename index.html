@@ -22,15 +22,18 @@
     <!-- for the header -->
     <header><!-- Orange block -->
         <div class="container"><!-- Yellow block -->
-            <a href="#" class="button"> <img src="img/imgs/logo-small.jpg.png" alt="Logo" class="logo"> </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html"> Work</a></li>
-                    <li><a href="about.html"> About</a></li>
-                    <li><a href="#contact"> Contact</a></li>
+            <div class="navtoggle" id="myNavtoggle">
+                <a href="#" class="button"> <img src="img/imgs/logo-small.jpg.png" alt="Logo" class="logo"> </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"> Work</a></li>
+                        <li><a href="about.html"> About</a></li>
+                        <li><a href="#contact"> Contact</a></li>
+                        <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fa-solid fa-bars"></i></a></li>
 
-                </ul>
-            </nav>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -42,7 +45,7 @@
                     <h1> Hi! My name is Erica Medina <span> I'm a UX Designer in Seattle, WA with a background in
                             business
                             and psychology.</span></h1>
-                    <p> bio? </p>
+                    <p>  </p>
                 </div>
             </div>
         </div>
@@ -1682,7 +1685,12 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
+
     <script src="js/sripts.js"></script>
+    
 </body>
 
 </html>
